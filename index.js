@@ -76,48 +76,52 @@ app.post("/ques1", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[0].answer1 && ans2 === ques[0].answer2)
-        res.render("message", { message: Messages[0], i: "ques2" });
-    else alert("Wrong answer please try again")
+        res.render("message", { message: Messages[0], i: "a" });
+    else res.render("message",{message:"Worng Answer",i:"wrong"});
 })
 app.post("/ques2", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[1].answer1 && ans2 === ques[1].answer2)
-        res.render("message", { message: Messages[1], i: "ques3" }); 
-    else alert("Wrong answer please try again")
+        res.render("message", { message: Messages[1], i: "b" }); 
+    else res.render("message",{message:"Worng Answer",i:"a"});
 })
 app.post("/ques3", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[2].answer1 && ans2 === ques[2].answer2)
-        res.render("message", { message: Messages[2], i: "ques4" }); 
-    else alert("Wrong answer please try again")
+        res.render("message", { message: Messages[2], i: "c" }); 
+    else res.render("message",{message:"Worng Answer",i:"b"});
 })
 app.post("/ques4", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[3].answer1 && ans2 === ques[3].answer2)
-        res.render("message", { message: Messages[3], i: "ques5" }); 
-    else alert("Wrong answer please try again")
+        res.render("message", { message: Messages[3], i: "d" }); 
+    else res.render("message",{message:"Worng Answer",i:"c"});
 })
 app.post("/ques5", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[4].answer1 && ans2 === ques[4].answer2)
     res.render("message", { message: Messages[4], i: "zoom" }); 
-    else alert("Wrong answer please try again")
+    else res.render("message",{message:"Worng Answer",i:"d"});
 })
 
-app.get("/ques2", (req, res) => {
+
+app.post("/wrong", (req, res) => {
+    res.render("index", { image: imgURL[2], i: "ques1", img1: QuesImg[0], img2: QuesImg[1] });
+})
+app.post("/a", (req, res) => {
     res.render("index", { image: imgURL[2], i: "ques2", img1: QuesImg[2], img2: QuesImg[3] });
 })
-app.get("/ques3", (req, res) => {
+app.post("/b", (req, res) => {
     res.render("index", { image: imgURL[2], i: "ques3", img1: QuesImg[4], img2: QuesImg[5] });
 })
-app.get("/ques4", (req, res) => {
+app.post("/c", (req, res) => {
     res.render("index", { image: imgURL[2], i: "ques4", img1: QuesImg[6], img2: QuesImg[7] });
 })
-app.get("/ques5", (req, res) => {
+app.post("/d", (req, res) => {
     res.render("index", { image: imgURL[2], i: "ques5", img1: QuesImg[8], img2: QuesImg[9] });
 })
 
