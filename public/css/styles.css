@@ -35,12 +35,11 @@ body::-webkit-scrollbar { width: 0px !important }
  
 }
 .story p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   padding: 0 10% 10%;
   color: white;
   line-height: 1.5;
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 0;
 }
 
