@@ -125,7 +125,7 @@ app.post("/d", (req, res) => {
     res.render("index", { image: imgURL[2], i: "ques5", img1: QuesImg[8], img2: QuesImg[9] });
 })
 
-app.get("/zoom", (req, res) => {
+app.post("/zoom", (req, res) => {
     res.sendFile(__dirname + "/zoom.html")
 })
 
