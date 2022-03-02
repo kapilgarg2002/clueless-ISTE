@@ -52,13 +52,13 @@ const Messages = [
 
 
 const QuesImg = [
-    'https://i.ibb.co/Xb6m9SL/Screenshot-2022-02-27-222040.jpg',
-    'https://i.ibb.co/cFcsmfz/Screenshot-2022-02-27-221126.jpg',
+    'https://i.ibb.co/RBkjvDQ/Screenshot-2022-02-27-222040.jpg',
+    'https://i.ibb.co/cxYGfQT/Screenshot-2022-02-27-221126.jpg',
     'https://i.ibb.co/Wnzp6VV/Screenshot-2022-02-27-222749.jpg',
-    'https://i.ibb.co/RcSGnhH/Screenshot-2022-02-27-225227.jpg',
+    'https://i.ibb.co/nbdMsJC/Screenshot-2022-02-27-225227.jpg',
     'https://i.ibb.co/M6t3QTD/Screenshot-2022-03-02-115046.jpg',
-    'https://i.ibb.co/WxbggqF/Screenshot-2022-02-27-225857.jpg',
-    'https://i.ibb.co/9TbXMP9/Screenshot-2022-02-27-230306.jpg',
+    'https://i.ibb.co/gZs2vgZ/Screenshot-2022-02-27-225857.jpg',
+    'https://i.ibb.co/3vhbWpf/Screenshot-2022-02-27-230306.jpg',
     'https://i.ibb.co/w6yZndg/Screenshot-2022-02-27-230510.jpg',
     'https://i.ibb.co/7kmRZ8S/Screenshot-2022-02-27-232724.jpg',
     'https://i.ibb.co/jr8x1jK/Screenshot-2022-02-27-231619.jpg'
@@ -77,35 +77,35 @@ app.post("/ques1", (req, res) => {
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[0].answer1 && ans2 === ques[0].answer2)
         res.render("message", { message: Messages[0], i: "a" });
-    else res.render("message",{message:"Worng Answer",i:"wrong"});
+    else res.render("message",{message:"Wrong Answer",i:"wrong"});
 })
 app.post("/ques2", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[1].answer1 && ans2 === ques[1].answer2)
         res.render("message", { message: Messages[1], i: "b" }); 
-    else res.render("message",{message:"Worng Answer",i:"a"});
+    else res.render("message",{message:"Wrong Answer",i:"a"});
 })
 app.post("/ques3", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[2].answer1 && ans2 === ques[2].answer2)
         res.render("message", { message: Messages[2], i: "c" }); 
-    else res.render("message",{message:"Worng Answer",i:"b"});
+    else res.render("message",{message:"Wrong Answer",i:"b"});
 })
 app.post("/ques4", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[3].answer1 && ans2 === ques[3].answer2)
         res.render("message", { message: Messages[3], i: "d" }); 
-    else res.render("message",{message:"Worng Answer",i:"c"});
+    else res.render("message",{message:"Wrong Answer",i:"c"});
 })
 app.post("/ques5", (req, res) => {
     var ans1 = (req.body.answer1).toLowerCase();
     var ans2 = (req.body.answer2).toLowerCase();
     if (ans1 === ques[4].answer1 && ans2 === ques[4].answer2)
     res.render("message", { message: Messages[4], i: "zoom" }); 
-    else res.render("message",{message:"Worng Answer",i:"d"});
+    else res.render("message",{message:"Wrong Answer",i:"d"});
 })
 
 
