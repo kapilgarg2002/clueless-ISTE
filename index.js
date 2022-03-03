@@ -64,9 +64,9 @@ const QuesImg = [
     'https://i.ibb.co/jr8x1jK/Screenshot-2022-02-27-231619.jpg'
 ]
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/story.html")
-})
+// app.get("/", (req, res) => {
+//     res.sendFile(__dirname + "/story.html")
+// })
 app.get("/main", (req, res) => {
     res.sendFile(__dirname + "/landing.html")
 })
