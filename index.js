@@ -67,9 +67,9 @@ const QuesImg = [
 // app.get("/", (req, res) => {
 //     res.sendFile(__dirname + "/story.html")
 // })
-app.get("/main", (req, res) => {
-    res.sendFile(__dirname + "/landing.html")
-})
+// app.get("/main", (req, res) => {
+//     res.sendFile(__dirname + "/landing.html")
+// })
 
 
 app.post("/ques1", (req, res) => {
